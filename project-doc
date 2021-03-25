@@ -1,0 +1,8 @@
+1 - criado repositório no github
+2-  clone do projeto para maquina
+3 - instalando e criando embiente virtual * pip install virtualenv * python -m venv .venv * .venv\scripts\activate
+4 - integração entrega continua Travis CI * criado arquivo .travis.yml
+5 - instalando django
+6 - instalando flake8 e criado arquivo .flake8
+7 - criado arquivo .pyup.yml
+8 - config .gitignore

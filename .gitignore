@@ -51,6 +51,14 @@ coverage.xml
 .hypothesis/
 .pytest_cache/
 
+#Pycharm files
+.idea/
+.classpath
+.project
+.settings/
+bin/
+*.sqlite3
+project-doc
 # Translations
 *.mo
 *.pot
