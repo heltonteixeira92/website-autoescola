@@ -6,3 +6,5 @@
 6 - instalando flake8 e criado arquivo .flake8
 7 - criado arquivo .pyup.yml
 8 - config .gitignore
+9 - pip freeze > requirements-dev.txt
+
