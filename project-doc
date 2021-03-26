@@ -19,3 +19,6 @@
     12.6 - ao tentar dar push pro heroku vai dar erro por conta dos arq staticos, usar heroku config:set DISABLE_COLLECTSTATIC=1 para desabilitar
     12.7 - fazer o push, git push heroku master:master -f, e está online no heroku - heroku open
 13 - configurar o deploy automatico direto no site do heroku, para ser feito depois de passar no teste do Travis CI
+14 - criar a app base do projeto, python manage.py startapp base
+15 - editamos a view, é responsável por responder as requisiçoes que fazemos no navegador
+16 - criada rota da app base home
