@@ -1,3 +1,4 @@
+############################# PASSO A PASSO DO PROJETO ##########################################
 1 - criado repositório no github
 2-  clone do projeto para maquina
 3 - instalando e criando embiente virtual -> pip install virtualenv * python -m venv .venv * .venv\scripts\activate
@@ -9,3 +10,9 @@
 9 - pip freeze > requirements-dev.txt
 10 - criando projeto django * django-admin startproject malves .
 11 - criando o Alias mng runserver no .venv -> doskey mng=@python "%VIRTUAL_ENV%\..\manage.py" $*
+12 - começo da configuração para publicar no heroku
+    12.1 - instalar interface de linha de comando do heroku
+    12.2 - colocar o * no ALLOWED_HOSTS = ['*'] indica que nossa aplicação será acessivel de qualquer dominio.
+    12.3 - criar arquivo procfile, onde falamos para o heroku como a app vai rodar
+    12.4 - instalo o gunicorn
+    12.5 - crio a app no heroku, heroku apps:create websiteautoescola ,ele já se integra com o próprio git repo do proj
