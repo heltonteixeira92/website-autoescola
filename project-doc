@@ -16,3 +16,6 @@
     12.3 - criar arquivo procfile, onde falamos para o heroku como a app vai rodar
     12.4 - instalo o gunicorn
     12.5 - crio a app no heroku, heroku apps:create websiteautoescola ,ele já se integra com o próprio git repo do proj
+    12.6 - ao tentar dar push pro heroku vai dar erro por conta dos arq staticos, usar heroku config:set DISABLE_COLLECTSTATIC=1 para desabilitar
+    12.7 - fazer o push, git push heroku master:master -f, e está online no heroku - heroku open
+13 - configurar o deploy automatico direto no site do heroku, para ser feito depois de passar no teste do Travis CI
