@@ -23,3 +23,8 @@
 15 - editamos a view, é responsável por responder as requisiçoes que fazemos no navegador
 16 - criada rota da app base home no url
 17 - configurar o pytest-django e criado a infra de teste
+18 - adicionar cobertura de teste pytest-cov para medir a cobertura e o codecov para gerar relatórios de cobertura para os PRs
+    18.1 -  pip install pytest-cov
+    18.2 - pip install codecov
+    18.3 - pytest --cov=malves
+    18.4 - configurado para rodar no travis CI

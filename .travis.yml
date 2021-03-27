@@ -5,4 +5,8 @@ install:
   - pip install -q -r requirements-dev.txt
 script:
   - flake8
-  - pytest
+  - pytest --cov=malves
+
+after_success:
+  - codecov
+
