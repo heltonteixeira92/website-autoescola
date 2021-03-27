@@ -21,4 +21,5 @@
 13 - configurar o deploy automatico direto no site do heroku, para ser feito depois de passar no teste do Travis CI
 14 - criar a app base do projeto, python manage.py startapp base
 15 - editamos a view, é responsável por responder as requisiçoes que fazemos no navegador
-16 - criada rota da app base home
+16 - criada rota da app base home no url
+17 - configurar o pytest-django e criado a infra de teste
