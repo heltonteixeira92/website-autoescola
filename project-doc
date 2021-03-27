@@ -28,3 +28,7 @@
     18.2 - pip install codecov
     18.3 - pytest --cov=malves
     18.4 - configurado para rodar no travis CI
+19 - usando o python-decouple para desacoplar todas as configurações do projeto, pratimente o ambiente de desenvolvimento tem as conf diferente do ambiente de produção
+    19.1 - o valor é buscado em uma variavel de ambiente, caso não esteja desponivel ele busca no arquivo .env
+    19.2 - o cast serve para fazer conversão da variavel, ex: do boleano para string
+    19.3 - heroku config:set DEBUG=False para não aparece pagina de erro com todos os detalhes em produção
