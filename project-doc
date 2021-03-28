@@ -32,3 +32,9 @@
     19.1 - o valor é buscado em uma variavel de ambiente, caso não esteja desponivel ele busca no arquivo .env
     19.2 - o cast serve para fazer conversão da variavel, ex: do boleano para string
     19.3 - heroku config:set DEBUG=False para não aparece pagina de erro com todos os detalhes em produção
+20 - usar o python-decouple para configurar a SECRET_KEY
+    20.1 - entrar no shell python e rodar comando crir chave nova
+        >>> from django.core.management.utils import get_random_secret_key
+        >>> get_random_secret_key()
+    20.2 - entro no console e configura a nova secret_key no keroku
+        heroku config:set SECRET_KEY="9^lbd!nejd+^x!6sdfjybozk0hsz1*@+fz_n12yc28)9)y7)gj"
