@@ -41,3 +41,7 @@
 21 - configurado o dns atraves do suporte para setar para no dominio da autoescola
     21.1 - heroku domains:add autoescolamalves.com.br
     21.2 - setado no .env, no settings e heroku
+22 - configurar banco de dados no settings, usar biblioteca dj-database-url ela gera os valores da config da criação do banco de dados
+    22.1 no servidor vai ser usado o postgree que é mais parrudo que o sqlite
+23 - setup do banco de dados postgree no servidor de entregas continuas para testar o codigo em ambiente simular do de produção
+    23.1 driver que conversa com o bd e python psycopg2
