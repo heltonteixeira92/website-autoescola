@@ -9,4 +9,5 @@ sqlparse==0.4.1
 pytest-django==4.1.0
 pytest_cov==2.11.1
 codecov==2.1.11
-python-decouple==3.4
+dj-database-url==0.5.0
+psycopg2-binary==2.8.6
