@@ -38,3 +38,6 @@
         >>> get_random_secret_key()
     20.2 - entro no console e configura a nova secret_key no keroku
         heroku config:set SECRET_KEY="9^lbd!nejd+^x!6sdfjybozk0hsz1*@+fz_n12yc28)9)y7)gj"
+21 - configurado o dns atraves do suporte para setar para no dominio da autoescola
+    21.1 - heroku domains:add autoescolamalves.com.br
+    21.2 - setado no .env, no settings e heroku
