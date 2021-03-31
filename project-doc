@@ -53,4 +53,5 @@
         MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')
 25 - criação da coleta de arquivos estaticos do site hospedado no CDN da AWS
     25.1 - criando user no IAM do AWS
-    25.2 - criação e configuração do CDN s3
+    25.2 - criação e configuração do CDN s3, bucket...
+    25.3 - configurar a biblioteca django_s3_folder_storage para finalmente fazer o uplaod de seus arquivos para o S3.
