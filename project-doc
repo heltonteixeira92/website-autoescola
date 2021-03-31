@@ -45,3 +45,9 @@
     22.1 no servidor vai ser usado o postgree que é mais parrudo que o sqlite
 23 - setup do banco de dados postgree no servidor de entregas continuas para testar o codigo em ambiente simular do de produção
     23.1 driver que conversa com o bd e python psycopg2
+24 - começar a configuração da coleta de arquivos estáticos
+    24.1 - configura da coleta local no settings para ambiente de desenvolvimento STATIC_URL = '/static/'
+        STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+    24.2 - configuração para permitir upload no site
+        MEDIA_URL = '/media/'
+        MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')
