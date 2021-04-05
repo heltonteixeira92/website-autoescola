@@ -56,4 +56,5 @@
     25.2 - criação e configuração do CDN s3, bucket...
     25.3 - configurar a biblioteca django_s3_folder_storage para finalmente fazer o uplaod de seus arquivos para o S3.
 26 - usar biblioteca collectfast para subir apenas os arquivos que foram alterados
-
+27 - foi customizado usuário para ser criado por e-mail e senha
+    28 - vamos automatizar o processo de aplicação de migrações no servidor.
