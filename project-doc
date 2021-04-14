@@ -60,3 +60,5 @@
     27.1 - vamos automatizar o processo de aplicação de migrações no servidor.
 28 - backup bd postgresql no heroku
 29 - criar teste para conteúdos que devam estar presentes em suas páginas.
+30 - instalado e configurado o django debug toolbar
+31 -
