@@ -62,3 +62,4 @@
 29 - criar teste para conteúdos que devam estar presentes em suas páginas.
 30 - instalado e configurado o django debug toolbar
 31 - instalado o Sentry e config com variavel de ambiente e conf no heroku.
+    O Sentry serve para logar erros do servidor, por isso é dependência do projeto, não de dev apenas.
