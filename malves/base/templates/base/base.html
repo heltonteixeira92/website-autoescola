@@ -27,6 +27,19 @@
 				  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				  </button>
+					<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav ml-auto">
+					  	<li class="nav-item active">
+							<a class="nav-link" href="{% url 'base:home' %}">Home <span class="sr-only"></span></a>
+					  	</li>
+					  	<li class="nav-item active">
+							<a class="nav-link" href="{% url 'servicos:view_servicos' %}">Serviços <span class="sr-only"></span></a>
+					  	</li>
+						<li class="nav-item active">
+							<a class="nav-link" href="#">Contato <span class="sr-only"></span></a>
+					  	</li>
+					</ul>
+					</div>
 				</nav>
 		<!-- fim navbar -->
 
@@ -54,7 +67,7 @@
 							<div class="container">
 								<div class="row">
 									<div class="col">
-										&copy; {% now 'Y' %} Autoescola Malves &middot; Todos os direitos reservados &middot; <a href="https://www.linkedin.com/in/helton-teixeira-sp1992/" class="text-light" target="_blank">Helton Teixeira</a>
+										&copy; {% now 'Y' %} Autoescola Malves &middot; Todos os direitos reservados &middot; <a href="https://heltonteixeira92.github.io/" class="text-light" target="_blank">Helton Teixeira</a>
 									</div>
 								</div>
 							</div>
