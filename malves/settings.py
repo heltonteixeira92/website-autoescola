@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'malves.base',
     'servicos',
+    'contatos',
 ]
 
 MIDDLEWARE = [

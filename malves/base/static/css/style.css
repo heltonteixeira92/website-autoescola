@@ -5,3 +5,13 @@
 .rights{
     background-color: #FFAE03;
 }
+
+.icones{
+    color: white !important;
+    padding-left:8px;
+    padding-bottom:5px;
+}
+
+html{
+    scroll-behavior: smooth;
+}
