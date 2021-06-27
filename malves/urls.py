@@ -7,6 +7,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('malves.base.urls')),
     path('servicos/', include('servicos.urls')),
+    path('contatos/', include('contatos.urls'))
 ]
 
 if settings.DEBUG:

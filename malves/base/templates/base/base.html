@@ -11,6 +11,9 @@
     <meta name="description" content="{% block description %}Autoescola Malves{% endblock description %}">
     <meta name="author" content="Helton Teixeira">
 
+	  <!-- fontawesome para usar icons-->
+	<script src="https://kit.fontawesome.com/00046ce686.js" crossorigin="anonymous"></script>
+
 	<link rel="icon" type="image/png" href="{% static 'favicon.png' %}" />
 	<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
 	<link href="{% static 'css/style.css' %}" rel="stylesheet">
@@ -36,7 +39,7 @@
 							<a class="nav-link" href="{% url 'servicos:view_servicos' %}">Serviços <span class="sr-only"></span></a>
 					  	</li>
 						<li class="nav-item active">
-							<a class="nav-link" href="#">Contato <span class="sr-only"></span></a>
+							<a class="nav-link" href="{% url 'contatos:url_contatos' %}">Contato <span class="sr-only"></span></a>
 					  	</li>
 					</ul>
 					</div>
@@ -54,12 +57,17 @@
 									<address>
 										Telefone: <a href="tel:+551155225108" class="text-light">(11) 5522-5108</a>
 										<br>
-										WhatsApp: (11) 9 8424-0935
-										<br>
-										<a href="mailto:cfcmalves@hotmail.com" class="text-light">cfcmalves@hotmail.com</a>
+										Telefone: <a href="tel:+5511984240935" class="text-light">(11) 9 8424-0935</a>
+										<!--<br>-->
+										<!--<a href="mailto:cfcmalves@hotmail.com" class="text-light">cfcmalves@hotmail.com</a>-->
 										<br>
 										Av. Carlos Lacerda nº 3025 - São Paulo - SP
 									</address>
+										<p>Siga-nos:
+											<a href="https://www.instagram.com/autoescolamalves/" target="_blank"><i class="icones fab fa-instagram fa-1x"></i></a>
+										<a href="www.facebook.com.br" target="_blank"> <i class="icones fab fa-facebook-square fa-1x "></i> </a>
+										<a href="https://www.linkedin.com/company/auto-moto-escola-malves/" target="_blank"><i class="icones fab fa-linkedin fa-1x"></i></a>
+									</p>
 								</div>
 							</div>
 						</div>
