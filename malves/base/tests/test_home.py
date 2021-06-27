@@ -15,7 +15,7 @@ def test_status_code(resp):
 
 
 def test_title(resp):
-    assert_contains(resp, '<title>Autoescola Malves - Home</title>')
+    assert_contains(resp, '<title>Ae Malves - Home</title>')
 
 
 def test_home_link(resp):
