@@ -12,6 +12,11 @@
     padding-bottom:5px;
 }
 
+.titulos{
+
+    font-weight: 700;
+}
+
 html{
     scroll-behavior: smooth;
 }
