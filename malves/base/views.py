@@ -5,4 +5,5 @@ from django.http import HttpResponse # noqa
 
 
 def home(request):
-    return render(request, 'base/home.html')
+    return render(request, 'base/home.html',
+                  {'section': 'home'})
