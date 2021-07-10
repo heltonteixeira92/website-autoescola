@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'malves.base',
     'servicos',
     'contatos',
+    'blog.apps.BlogConfig',
 ]
 
 MIDDLEWARE = [
