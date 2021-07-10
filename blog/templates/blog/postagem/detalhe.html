@@ -1,10 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends 'base/base.html' %}
+
+
+{% block title %} {{ postagem.titulo}} {% endblock %}
+{% block body %}
+<div class="container">
+<article>
+  <header>
+    <h2>
+      {{ postagem.titulo }}
+    </h2>
+    <p>Publicado em <time datetime="2021-04-12T13:00:24+01:00">{{ postagem.criado }}</time> por <a href="#">{{ postagem.autor }}</a> - <a href="#comments">30 comentários</a></p>
+  </header>
+  <p>{{ postagem.corpo|linebreaks }}</p>
+  <br>
+</article>
+</div>
+
+{% endblock %}
