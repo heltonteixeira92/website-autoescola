@@ -196,3 +196,7 @@ if SENTRY_DSN:
         integrations=[DjangoIntegration()],
 
     )
+
+# this config force to use SSL protocol
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SECURE_SSL_REDIRECT = True
