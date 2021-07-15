@@ -3,5 +3,41 @@
 }
 
 .rights{
-    background-color: #FFAE03;
+    background-color: #9933cc;
+}
+
+.icones{
+    color: white !important;
+    padding-left:8px;
+    padding-bottom:5px;
+}
+
+.titulos{
+
+    font-weight: 700;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+.corBorda{
+    background-color: #9933cc;
+}
+
+
+.botao{
+    background-color: #9933cc;
+    color: white;
+    padding: 8px;
+    border-radius: 15px;
+    transition: 0.2s;
+}
+
+.botao:hover{
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border: 1px solid yellow;
 }
