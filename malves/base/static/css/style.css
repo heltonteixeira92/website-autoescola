@@ -1,5 +1,9 @@
 .main-footer{
     background-color: #F9C80E;
+    background: -webkit-gradient(linear, left top, right top, from(#F9C80E), to(#FFAE03)) no-repeat;
+     background: -moz-linear-gradient(left, #F9C80E, #FFAE03);
+     filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=1, StartColorStr='#F9C80E', EndColorStr='#000000');
+
 }
 
 .rights{
@@ -19,4 +23,25 @@
 
 html{
     scroll-behavior: smooth;
+}
+
+
+.corBorda{
+    background-color: #9933cc;
+}
+
+
+.botao{
+    background-color: #9933cc;
+    color: white;
+    padding: 8px;
+    border-radius: 15px;
+    transition: 0.2s;
+}
+
+.botao:hover{
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border: 1px solid yellow;
 }
