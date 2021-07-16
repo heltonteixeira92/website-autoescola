@@ -11,7 +11,7 @@ def resp(client):
 
 
 def test_status_code(resp):
-    assert resp.status_code == 200 or 301
+    assert resp.status_code == 200
 
 
 def test_title(resp):
