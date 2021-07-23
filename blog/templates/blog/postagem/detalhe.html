@@ -9,8 +9,11 @@
     <h2>
       {{ postagem.titulo }}
     </h2>
-    <p>Publicado em <time datetime="2021-04-12T13:00:24+01:00">{{ postagem.criado }}</time> por <a href="#">{{ postagem.autor }}</a> - <a href="#comments">30 comentários</a></p>
+    <p class="date">Publicado em <time datetime="2021-04-12T13:00:24+01:00">{{ postagem.criado }}</time> por <a href="#">{{ postagem.autor.first_name }}</a> </p>
   </header>
+    <div class="cont">
+      <img style="width: 350px; margin-top: 20px;" src="{{postagem.img.url}}">
+    </div>
   <p>{{ postagem.corpo|linebreaks }}</p>
   <br>
 </article>

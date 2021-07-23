@@ -35,6 +35,9 @@
 					  	<li {% if section == "home" %}class="selected"{% else %} class="nav-item active"{% endif %}>
 							<a class="nav-link" href="{% url 'base:home' %}">Home <span class="sr-only"></span></a>
 					  	</li>
+						<li {% if section == "contatos" %}class="selected" {% else %}class="nav-item active"{% endif %}>
+							<a class="nav-link" href="{% url 'blog:post_list' %}">Blog <span class="sr-only"></span></a>
+					  	</li>
 					  	<li {% if section == "servicos" %}class="selected"{% else %}class="nav-item active"{% endif %}>
 							<a class="nav-link" href="{% url 'servicos:view_servicos' %}">Serviços <span class="sr-only"></span></a>
 					  	</li>
