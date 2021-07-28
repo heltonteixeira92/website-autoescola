@@ -6,7 +6,8 @@ def post_list(request):
     postagens = Postagem.published.all()
     return render(request,
                   'blog/postagem/lista.html',
-                  {'postagens': postagens})
+                  {'postagens': postagens}
+                  )
 
 
 def post_detail(request, year, month, day, postagem):

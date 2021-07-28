@@ -1,24 +1,34 @@
 {% extends 'base/base.html' %}
 
-{% block body %}
-{% for post in postagens %}
-<div class="container">
-<article>
-  <header>
-    <h2>
-      <a href="{{ post.get_absolute_url }}"> {{ post.titulo }} </a>
-    </h2>
-    <p class="date">Publicado em <time datetime="2021-04-12T13:00:24+01:00">{{ post.criado }}</time> por <a href="#">{{ post.autor.first_name }}</a> - <a href="#comments">30 comentários</a></p>
-  </header>
-  <div class="cont">
-    <img style="width: 350px; margin-top: 20px;" src="{{post.img.url}}">
-  </div>
-  <p>{{ post.corpo|truncatewords:30|linebreaks }}<a href="https://jornaldocarro.estadao.com.br/servicos/nova-lei-de-transito-entra-hoje-em-vigor-veja-as-10-mudancas-no-ctb/" target="_blank"> clique aqui.</a></p>
-  <br>
-</article>
-  <hr class="my-3">
-</div>
+  {% block breadcrumb %}
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="{% url 'base:home' %}">home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">notícias</li>
+    </ol>
+  </nav>
+  {% endblock %}
 
-{% endfor %}
+  {% block body %}
+    {% for post in postagens %}
+      <main role="main">
+        <div class="container">
+          <article>
+            <header>
+              <h2>
+                <a class="link" href="{{ post.get_absolute_url }}"> {{ post.titulo }} </a>
+              </h2>
+              <p class="date">Publicado em <time datetime="2021-04-12T13:00:24+01:00">{{ post.criado }}</time> por <a href="#">{{ post.autor.first_name }}</a> - <a href="#comments">30 comentários</a></p>
+            </header>
+            <div class="cont">
+              <img style="width: 350px; margin-top: 20px;" src="{{post.img.url}}">
+            </div>
+            <p>{{ post.corpo|truncatewords:30|linebreaks }}<a href="{{ post.get_absolute_url }}" target="_blank"> clique aqui.</a></p>
+            <br>
+          </article>
+          <hr class="my-3">
+        </div>
+      </main>
+    {% endfor %}
 
-{% endblock %}
+  {% endblock %}

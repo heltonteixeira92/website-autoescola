@@ -25,7 +25,7 @@
 
 
 		<!-- inicio navbar -->
-				<nav class="navbar navbar-expand-lg navbar-dark shadow-sm p-3 mb-5 corBorda">
+				<nav class="navbar navbar-expand-lg navbar-dark shadow-sm p-3 mb-5 corNav">
 				  <a class="navbar-brand" href="{% url 'base:home' %}">AE MALVES</a>
 				  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
@@ -34,9 +34,6 @@
 					<ul class="navbar-nav ml-auto">
 					  	<li {% if section == "home" %}class="selected"{% else %} class="nav-item active"{% endif %}>
 							<a class="nav-link" href="{% url 'base:home' %}">Home <span class="sr-only"></span></a>
-					  	</li>
-						<li {% if section == "contatos" %}class="selected" {% else %}class="nav-item active"{% endif %}>
-							<a class="nav-link" href="{% url 'blog:post_list' %}">Blog <span class="sr-only"></span></a>
 					  	</li>
 					  	<li {% if section == "servicos" %}class="selected"{% else %}class="nav-item active"{% endif %}>
 							<a class="nav-link" href="{% url 'servicos:view_servicos' %}">Serviços <span class="sr-only"></span></a>
@@ -47,6 +44,8 @@
 					</ul>
 					</div>
 				</nav>
+		{% block breadcrumb %}
+			{% endblock%}
 		<!-- fim navbar -->
 
 		{% block body %} {% endblock body %}

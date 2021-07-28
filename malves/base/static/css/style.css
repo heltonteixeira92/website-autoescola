@@ -1,6 +1,6 @@
 .cont{
 
-    overflow:auto;
+    overflow:float;
     width: 350px;
 
   }
@@ -40,7 +40,7 @@ html{
 }
 
 
-.corBorda{
+.corNav{
     background-color: #9933cc;
 }
 
@@ -58,4 +58,9 @@ html{
     text-decoration: none;
     padding: 10px;
     border: 1px solid yellow;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
 }

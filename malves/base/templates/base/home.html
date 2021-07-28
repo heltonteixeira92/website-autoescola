@@ -10,7 +10,7 @@
 					<div class="carousel slide" id="carousel-998238">
 						<div class="carousel-inner">
 							<div class="carousel-item active">
-								<img class="d-block w-100" alt="Carro Auto escola malves" src="{% static 'img/driverSchoolCar.jpeg' %}">
+								<img class="d-block w-100 rounded" alt="Carro Auto escola malves" src="{% static 'img/driverSchoolCar.jpeg' %}">
 								<div class="carousel-caption">
 									<h4 class="jumbotron-heading titulos">
 										AUTO MOTO ESCOLA MALVES
@@ -94,22 +94,28 @@
 				<div class="row">
 					<div class="col-md-12">
 						<section class="container">
-						<article>
 							<header>
-								<h2>Nova lei de trânsito entra hoje em vigor: veja as 12 mudanças no CTB</h2>
-								<p>Publicado em <time datetime="2021-04-12T13:00:24+01:00">12 de Abril de 2021</time> por <a href="#">Helton Teixeira</a> - <a href="#comments">30 comentários</a></p>
+								<h2>Notícias</h2>
 							</header>
-							<p>Saíba as principais mudanças que ocorreram no CTB nesta segunda feira. <a href="https://jornaldocarro.estadao.com.br/servicos/nova-lei-de-transito-entra-hoje-em-vigor-veja-as-10-mudancas-no-ctb/" target="_blank">clique aqui.</a></p>
 							<br>
-						</article>
+							{% if latest_postagens %}
+								{% for post in latest_postagens %}
+									<article>
+										<header>
+										  <h2>
+											<a class="link" href="{{ post.get_absolute_url }}"> {{ post.titulo }} </a>
+										  </h2>
+										  <p class="date">Publicado em <time datetime="2021-04-12T13:00:24+01:00">{{ post.criado }}</time> por <a href="#">{{ post.autor.first_name }}</a> - <a href="#comments">30 comentários</a></p>
+										</header>
+										<p>{{ post.corpo|truncatewords:50|linebreaks }}<a href="{{ post.get_absolute_url }}" target="_parent"> ver notícia </a></p>
+										<br>
+									</article>
+								{% endfor %}
+								<center class="pb-4"><a class="botao" href="{% url 'blog:post_list' %}">Ver mais &raquo;</a></center>
+							{% else %}
+								<h4 class="pb-5 text-center"> ainda não temos postagens disponiveis </h4>
+							{% endif %}
 
-						<!--<article>
-							<header>
-								<h2>O título do artigo é aqui</h2>
-								<p>Publicado em <time datetime="2015-03-09T13:00:24+01:00">09 de Março de 2015</time> por <a href="#">Author</a> - <a href="#comments">15 comentários</a></p>
-							</header>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-						</article>-->
 						</section>
 							<hr class="my-3">
 							<center class="float-end"><a href="#">Back to top</a></center>

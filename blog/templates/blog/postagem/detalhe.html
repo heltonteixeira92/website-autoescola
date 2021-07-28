@@ -1,22 +1,32 @@
 {% extends 'base/base.html' %}
 
+{% block breadcrumb %}
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="{% url 'base:home' %}">home</a></li>
+    <li class="breadcrumb-item"><a href="{% url 'blog:post_list' %}">notícias</a></li>
+    <li class="breadcrumb-item active" aria-current="page">{{postagem.titulo}}</li>
+  </ol>
+</nav>
+{% endblock %}
 
 {% block title %} {{ postagem.titulo}} {% endblock %}
 {% block body %}
-<div class="container">
-<article>
-  <header>
-    <h2>
-      {{ postagem.titulo }}
-    </h2>
-    <p class="date">Publicado em <time datetime="2021-04-12T13:00:24+01:00">{{ postagem.criado }}</time> por <a href="#">{{ postagem.autor.first_name }}</a> </p>
-  </header>
-    <div class="cont">
-      <img style="width: 350px; margin-top: 20px;" src="{{postagem.img.url}}">
-    </div>
-  <p>{{ postagem.corpo|linebreaks }}</p>
-  <br>
-</article>
-</div>
+
+  <div class="container">
+    <article>
+      <header>
+        <h2>
+          {{ postagem.titulo }}
+        </h2>
+        <p class="date">Publicado em <time datetime="2021-04-12T13:00:24+01:00">{{ postagem.criado }}</time> por <a href="#">{{ postagem.autor.first_name }}</a> </p>
+      </header>
+        <div class="cont">
+          <img style="width: 350px; margin-top: 20px;" src="{{ postagem.img.url }}">
+        </div>
+      <p>{{ postagem.corpo|linebreaks }}</p>
+      <br>
+    </article>
+  </div>
 
 {% endblock %}
