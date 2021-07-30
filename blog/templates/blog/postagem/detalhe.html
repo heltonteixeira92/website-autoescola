@@ -12,7 +12,7 @@
 
 {% block title %} {{ postagem.titulo}} {% endblock %}
 {% block body %}
-
+<main role="main">
   <div class="container">
     <article>
       <header>
@@ -26,7 +26,8 @@
         </div>
       <p>{{ postagem.corpo|linebreaks }}</p>
       <br>
+           <p>Fonte: {{ postagem.fonte }}</p>
     </article>
   </div>
-
+</main>
 {% endblock %}
