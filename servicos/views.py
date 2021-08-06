@@ -1,6 +1,8 @@
 from django.shortcuts import render
+from .models import Servicos
 
 
 def view_servicos(request):
-    return render(request, 'servicos/servicos.html',
-                  {'section': 'servicos'})
+    servicos = Servicos.objects.all()
+    context = {'section': 'servicos', 'servicos': servicos}
+    return render(request, 'servicos/servicos.html', context)

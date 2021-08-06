@@ -23,7 +23,7 @@
             <div class="cont">
               <img style="width: 350px; margin-top: 20px;" src="{{post.img.url}}">
             </div>
-            <p>{{ post.corpo|truncatewords:30|linebreaks }}<a href="{{ post.get_absolute_url }}" target="_blank"> clique aqui.</a></p>
+            <p>{{ post.corpo|truncatewords:30|linebreaks }}<a href="{{ post.get_absolute_url }}" target="_self"> clique aqui.</a></p>
             <br>
           </article>
           <hr class="my-3">

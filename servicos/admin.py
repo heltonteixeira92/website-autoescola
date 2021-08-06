@@ -1,3 +1,7 @@
-from django.contrib import admin # noqa
+from django.contrib import admin
+from .models import Servicos
 
-# Register your models here.
+
+@admin.register(Servicos)
+class ServicoAdmin(admin.ModelAdmin):
+    list_display = ('titulo_servico', 'subtitulo')
