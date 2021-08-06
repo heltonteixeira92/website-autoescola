@@ -4,111 +4,51 @@
 
 {% block body %}
 <main role="main">
-    <div class="container mt-5">
+    <div class="container mt-5 mb-5">
             <h2> SERVIÇOS</h2>
-        <p> Serviços que oferecemos e como funciona o processo.</p>
+		<br>
+        <p> Principais serviços que oferecemos.</p>
 
-
-
-			 <!-- Three columns of text below the carousel -->
-			<div class="row justify-content-end pt-3">
-			  <div class="col-lg-3">
-				<img class="bd-placeholder-img rounded-circle" src="{% static 'img/Moto.jpeg' %}" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
-				<h2>Categoria A</h2>
-
-				  <ul><p><b>MOTO</b></p>
-					 <li> Pré-cadastro</li>
-					 <li> Exame médico</li>
-					  <li> CFC teórico</li>
-					  <li> Prova teórica</li>
-					  <li> 	20 aulas práticas</li>
-					  <li> 	Prova prática</li>
-					  <li>  Emissão CNH</li>
-				  </ul>
-				<!-- <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>-->
-			  </div><!-- /.col-lg-4 -->
-			  <div class="col-lg-3">
-				<img class="bd-placeholder-img rounded-circle" src="{% static 'img/Mobi.jpeg' %}" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
-
-				<h2>Categoria B</h2>
-
-				  <ul><p><b>CARRO</b></p>
-					 <li> Pré-cadastro</li>
-					 <li> Exame médico</li>
-					  <li> CFC teórico</li>
-					  <li> Prova teórica</li>
-					  <li> 	20 aulas práticas</li>
-					  <li> 	Prova prática</li>
-					  <li>  Emissão CNH</li>
-				  </ul>
-				<!--<p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>-->
+			<div class="card-group pt-4">
+				{% if servicos %}
+				 {% for servico in servicos %}
+					 <div class="card">
+						<div class="card-body">
+						  <h5 class="card-title">{{ servico.titulo_servico }}</h5>
+						  <h6 class="card-subtitle mb-2 text-muted">{{servico.subtitulo}}</h6>
+						  <p class="card-text">{{servico.descricao}}</p>
+						</div>
+					  </div>
+				 {% endfor %}
+				{% else %}
+			  <div class="card">
+				<div class="card-body">
+				  <h5 class="card-title">Categoria A</h5>
+				  <h6 class="card-subtitle mb-2 text-muted">Motocicleta</h6>
+				  <p class="card-text">poderá condizur veículo motorizado de duas ou três rodas, com ou sem carro lateral</p>
+				</div>
 			  </div>
-				<!-- /.col-lg-4 -->
-			  <div class="col-lg-4">
-				<img class="bd-placeholder-img rounded-circle" src="{% static 'img/CarroMoto.jpeg' %}" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
+			  <div class="card">
+				<div class="card-body">
+				  <h5 class="card-title">Categoria B</h5>
+					<h6 class="card-subtitle mb-2 text-muted">Carro</h6>
+				  <p class="card-text">poderá conduzir veículo motorizado, não abrangido pela categoria A, cujo peso bruto total não exceda a três mil e quinhentos quilogramas e cuja lotação não exceda a oito lugares, excluído o do motorista</p>
 
-				<h2>Categoria AB</h2>
-
-				  <ul><p><b>CARRO E MOTO</b></p>
-					 <li> Pré-cadastro</li>
-					 <li> Exame médico</li>
-					  <li> CFC teórico</li>
-					  <li> Prova teórica</li>
-					  <li> 	40 aulas práticas</li>
-					  <li> 	Provas práticas</li>
-					  <li>  Emissão CNH</li>
-				  </ul>
-
-            </div>
-            </div>
-        <hr class="my-4">
-        <div class="row justify-content-end mb-5">
-			  <div class="col-lg-3">
-				<img class="bd-placeholder-img rounded-circle" src="{% static 'img/cnh.jpg' %}" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
-				<h2>CNH Suspensa</h2>
-
-				  <ul><p><b></b></p>
-					 <li> Cumprimento penalidade</li>
-					 <li> Curso de reciclagem</li>
-					  <li> Agendamento renovação</li>
-
-				  </ul>
-				<!-- <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>-->
-			  </div><!-- /.col-lg-4 -->
-			  <div class="col-lg-3">
-				<img class="bd-placeholder-img rounded-circle" src="{% static 'img/cnh.jpg' %}" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
-
-				<h3>Aula Particular</h3>
-
-				   <ul><p><b></b></p>
-					 <li> Instrutor credenciado</li>
-					 <li> Aulas no trânsito</li>
-					  <li> Vença o medo</li>
-					  <li> 50 minutos aula</li>
-					  <li> 	Pacotes de aula</li>
-
-				  </ul>
-				<!--<p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>-->
+				</div>
 			  </div>
-				<!-- /.col-lg-4 -->
-			  <div class="col-lg-4">
-				<img class="bd-placeholder-img rounded-circle" src="{% static 'img/cnh.jpg' %}" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
-
-				<h2>Reabilitação AB</h2>
-
-				  <ul><p><b></b></p>
-					 <li> Pré-cadastro</li>
-					 <li> Exame médico</li>
-					  <li> Prova teórica</li>
-					  <li> 	Provas práticas</li>
-					  <li>  Emissão CNH</li>
-				  </ul>
+			  <div class="card">
+				<div class="card-body">
+				  <h5 class="card-title">Categoria AB</h5>
+					<h6 class="card-subtitle mb-2 text-muted">Carro e Motocicleta</h6>
+				  <p class="card-text">poderá conduzir veículo motorizado, abrangindo motocicletas, cujo peso bruto total não exceda a três mil e quinhentos quilogramas e cuja lotação não exceda a oito lugares, excluído o do motorista</p>
+				</div>
+			  </div>
+				{% endif %}
+			</div>
 
 
-</ul>
-</div>
-            </div>
-    </div>
+	</div>
+
 <!-- Botão Whatsapp -->
 				  <a href="https://api.whatsapp.com/send?phone=5511984240935&text=Olá, Gostaria de informações"
 						target="_blank"
