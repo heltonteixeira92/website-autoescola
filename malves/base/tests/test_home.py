@@ -5,8 +5,8 @@ from malves.django_assertions import assert_contains
 
 
 @pytest.fixture
-def resp(client):
-    resp = client.get(reverse('base:home'))
+def resp(client, db):
+    resp = client.get(reverse('base:home'), follow=True)
     return resp
 
 
