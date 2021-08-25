@@ -16,5 +16,8 @@ before_script:
 
 script:
   - flake8
+  - pytest --cov=malves
 
+after_success:
+  - pipenv run codecov
 
