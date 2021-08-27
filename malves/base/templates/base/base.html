@@ -47,7 +47,11 @@
 							<a href="https://pt-br.facebook.com/AutoEscolaMalves/" target="_blank"> <i class="icones fab fa-facebook-square fa-1x pr-2 "></i> </a>
 							<a href="https://www.linkedin.com/company/auto-moto-escola-malves/" target="_blank"><i class="icones fab fa-linkedin fa-1x"></i></a>
 						</div>
+						{% if user.is_authenticated %}
+
+						{% else %}
 						<a class="btn btn-light" href="{% url 'login' %}">Entrar</a>
+						{% endif %}
 					</div>
 				</nav>
 
