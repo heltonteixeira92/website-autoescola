@@ -29,10 +29,6 @@ def resp_post(client, usuario):
     return client.post(reverse('login'), {'username': usuario.email, 'password': usuario.senha_plana}, follow=True)
 
 
-def test_login_redirect(resp_post):
-    assert resp_post.url == reverse('base:home')
-
-
 @pytest.fixture
 def resp_home(client, db):
     return client.get(reverse('base:home'), follow=True)

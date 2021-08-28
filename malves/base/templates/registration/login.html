@@ -5,7 +5,7 @@
 
 {% block body %}
 <main role="main">
-    <div class="container mt-3">
+    <div class="container mt-5 mb-5">
         <div class="row">
             <div class="col">
                 {% if form.errors %}
@@ -20,7 +20,7 @@
                 <p>Please login to see this page.</p>
                 {% endif %}
                 {% endif %}
-
+                <h4> Efetuar Login </h4>
                 <form method="post" action="{% url 'login' %}">
                     {% csrf_token %}
                     <table>
@@ -39,7 +39,7 @@
                 </form>
 
                 {# Assumes you setup the password_reset view in your URLconf #}
-                <p><a href="{% url 'password_reset' %}">Lost password?</a></p>
+                <!-- <p><a href="{% url 'password_reset' %}">Lost password?</a></p> -->
             </div>
         </div>
     </div>
