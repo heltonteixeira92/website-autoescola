@@ -86,20 +86,3 @@ html{
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
-input[type=text], input[type=email], textarea {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-
-}
-
-form{
-    width: 420px;
-    padding: 10px;
-}
-
-label{
-    display: block;
-    margin-top: 10px;
-}
