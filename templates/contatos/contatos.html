@@ -38,17 +38,38 @@
     <section>
         <div class="container mb-5" align="center">
             <hr class="my-2">
-            <h6 class="mb-4 mt-5"><strong>Envie sua dúvida, sugestão ou reclamação, que em breve entraremos em contato. </strong></h6>
-            <form action="" method="post">
-                {% csrf_token %}
-                {{ form|crispy }}
+            <h6 class="mb-4 mt-5"><strong>Envie sua dúvida, sugestão ou reclamação, que em breve entraremos em
+                contato. </strong></h6>
+            <!--            <form action="" method="post">-->
+            <!--                {% csrf_token %}-->
+            <!--                {{ form|crispy }}-->
+            <!--                <br>-->
+            <!--                <input type="submit" value="Enviar">-->
+            <!--            </form>-->
+            <form action="" method="post" id="form">
+                <div id="div_id_email" class="form-group"><label for="id_email" class=" requiredField">
+                    Email<span class="asteriskField">*</span> </label>
+                    <div class=""><input type="email" name="email" maxlength="254" class="emailinput form-control"
+                                         required="" id="id_email"></div>
+                </div>
+                <div id="div_id_assunto" class="form-group"><label for="id_assunto" class=" requiredField">
+                    Assunto<span class="asteriskField">*</span> </label>
+                    <div class=""><input type="text" name="assunto" maxlength="255"
+                                         class="textinput textInput form-control" required="" id="id_assunto"></div>
+                </div>
+                <div id="div_id_mensagem" class="form-group"><label for="id_mensagem" class=" requiredField">
+                    Mensagem<span class="asteriskField">*</span> </label>
+                    <div class=""><textarea name="mensagem" cols="40" rows="10" class="textarea form-control"
+                                            required="" id="id_mensagem"></textarea></div>
+                </div>
+
                 <br>
                 <input type="submit" value="Enviar">
             </form>
         </div>
     </section>
     <div class="container mb-5">
-        <ol> <strong>Lembramos que alguns cuidados pessoais são de extrema importância neste momento.</strong>
+        <ol><strong>Lembramos que alguns cuidados pessoais são de extrema importância neste momento.</strong>
             <li> Evitar aglomerações;</li>
             <li> Lavar as mãos com água e sabão ou passar álcool em gel;</li>
             <li> Não levar as mãos aos olhos, boca e nariz;</li>
@@ -57,5 +78,36 @@
             <li> Garantir que os ambientes estejam ventilados;</li>
         </ol>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+
+    <script>
+        let form = document.getElementById('form'); // get the form
+
+        function apagaForm() {
+	        document.getElementById('id_assunto').value = '';
+	        document.getElementById('id_mensagem').value = '';
+	        document.getElementById('id_email').value = '';
+        }
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault()
+
+            let data = new FormData();
+
+            data.append("assunto", document.getElementById('id_assunto').value)
+            data.append("mensagem", document.getElementById('id_mensagem').value)
+            data.append("email", document.getElementById('id_email').value)
+            data.append("csrfmiddlewaretoken", '{{ csrf_token }}')
+
+            axios.post('create_contact/', data)
+            .then(res => {
+                alert("Suas informações de contato e mensagem foram enviadas com sucesso!")
+                apagaForm();
+            })
+            .catch(error => console.log(error))
+
+        })
+
+    </script>
 </main>
 {% endblock %}
