@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'servicos',
     'contatos',
     'blog.apps.BlogConfig',
+    'dashboard',
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
