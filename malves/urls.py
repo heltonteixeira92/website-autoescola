@@ -10,6 +10,7 @@ urlpatterns = [
     path('servicos/', include('servicos.urls')),
     path('contatos/', include('contatos.urls')),
     path('noticias/', include('blog.urls', namespace='blog')),
+    path('dashboard/', include('dashboard.urls'))
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

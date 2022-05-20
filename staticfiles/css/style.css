@@ -1,10 +1,36 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    display: table;
+}
+
+.cont{
+
+    overflow:float;
+    width: 350px;
+
+  }
+
+p.date {
+    color:#ccc;
+    font-family: georgia, serif;
+    font-size: 14px;
+    font-style: italic;
+}
 
 .main-footer{
+ display: table-row;
+    height: 0;
     background-color: #F9C80E;
+    background: -webkit-gradient(linear, left top, right top, from(#F9C80E), to(#FFAE03)) no-repeat;
+     background: -moz-linear-gradient(left, #F9C80E, #FFAE03);
+     filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=1, StartColorStr='#F9C80E', EndColorStr='#000000');
+
 }
 
 .rights{
-    background-color: #9933cc;
+    background-color: #FFAE03;
 }
 
 .icones{
@@ -14,8 +40,9 @@
 }
 
 .titulos{
-
-    font-weight: 700;
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+  font-weight: 700;
 }
 
 html{
@@ -23,7 +50,7 @@ html{
 }
 
 
-.corBorda{
+.corNav{
     background-color: #9933cc;
 }
 
@@ -41,4 +68,20 @@ html{
     text-decoration: none;
     padding: 10px;
     border: 1px solid yellow;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+}
+
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
