@@ -8,3 +8,10 @@ def home(request):
     latest_postagens = Postagem.published.order_by('-publicar')[:2]
     context = {'latest_postagens': latest_postagens, 'section': 'home'}
     return render(request, 'base/home.html', context)
+
+
+def handler404(request, exception):
+    context = {}
+    response = render(request, "base/error-404.html", context=context)
+    response.status_code = 404
+    return response
