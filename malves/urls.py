@@ -20,3 +20,5 @@ if settings.DEBUG:
     urlpatterns.append(
         path('__debug__/', include(debug_toolbar.urls))
     )
+
+handler404 = 'malves.base.views.handler404'
