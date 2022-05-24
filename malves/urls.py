@@ -22,3 +22,4 @@ if settings.DEBUG:
     )
 
 handler404 = 'malves.base.views.handler404'
+handler500 = 'malves.base.views.handler500'
