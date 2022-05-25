@@ -1,48 +1,63 @@
-{% extends 'base/base.html' %}
+{% extends 'base-dashboard.html' %}
 {% load static %}
-{% block title %}Ae Malves - login{% endblock title %}
-
-
-{% block body %}
-<main role="main">
-    <div class="container mt-5 mb-5">
-        <div class="row">
-            <div class="col">
-                {% if form.errors %}
+{% block title %} Ae Malves - Login {% endblock title %}
+{% block content %}
+    <div class="container-scroller">
+      <div class="container-fluid page-body-wrapper full-page-wrapper">
+        <div class="row w-100 m-0">
+          <div class="content-wrapper full-page-wrapper d-flex align-items-center auth login-bg">
+            <div class="card col-lg-4 mx-auto">
+              <div class="card-body px-5 py-5">
+                 {% if form.errors %}
                 <p>Your username and password didn't match. Please try again.</p>
                 {% endif %}
-
                 {% if next %}
                 {% if user.is_authenticated %}
                 <p>Your account doesn't have access to this page. To proceed,
                     please login with an account that has access.</p>
                 {% else %}
-                <p>Please login to see this page.</p>
+                 <p>Please login to see this page.</p>
                 {% endif %}
                 {% endif %}
-                <h4> Efetuar Login </h4>
+
+                <h3 class="card-title text-left mb-3">Login</h3>
                 <form method="post" action="{% url 'login' %}">
-                    {% csrf_token %}
-                    <table>
-                        <tr>
-                            <td>{{ form.username.label_tag }}</td>
-                            <td>{{ form.username }}</td>
-                        </tr>
-                        <tr>
-                            <td>{{ form.password.label_tag }}</td>
-                            <td>{{ form.password }}</td>
-                        </tr>
-                    </table>
-
-                    <input type="submit" value="login">
-                    <input type="hidden" name="next" value="{{ next }}">
+                  {% csrf_token %}
+                  <div class="form-group">
+                    <label>Username or email *</label>
+                    {{ form.username }}
+<!--                    <input type="text" class="form-control p_input">-->
+                  </div>
+                  <div class="form-group">
+                    <label>Password *</label> <br>
+                    {{ form.password }}
+<!--                    <input type="text" class="form-control p_input">-->
+                  </div>
+                  <div class="form-group d-flex align-items-center justify-content-between">
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input"> Remember me </label>
+                    </div>
+                    <a href="#" class="forgot-pass">Forgot password</a>
+                  </div>
+                  <div class="text-center">
+                    <button type="submit" class="btn btn-primary btn-block enter-btn">Login</button>
+                  </div>
+<!--                  <div class="d-flex">-->
+<!--                    <button class="btn btn-facebook mr-2 col">-->
+<!--                      <i class="mdi mdi-facebook"></i> Facebook </button>-->
+<!--                    <button class="btn btn-google col">-->
+<!--                      <i class="mdi mdi-google-plus"></i> Google plus </button>-->
+<!--                  </div>-->
+                  <p class="sign-up">Don't have an Account?<a href="#"> Sign Up</a></p>
                 </form>
-
-                {# Assumes you setup the password_reset view in your URLconf #}
-                <!-- <p><a href="{% url 'password_reset' %}">Lost password?</a></p> -->
+              </div>
             </div>
+          </div>
+          <!-- content-wrapper ends -->
         </div>
+        <!-- row ends -->
+      </div>
+      <!-- page-body-wrapper ends -->
     </div>
-</main>
-
-{% endblock body %}
+    {% endblock content %}
