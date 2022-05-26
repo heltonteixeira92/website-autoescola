@@ -18,3 +18,4 @@ Pillow==8.4.0
 pytest~=6.2.2
 model-bakery==1.5.0
 django-crispy-forms==1.12.0
+django-cors-headers==3.10.1
