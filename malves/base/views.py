@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse # noqa
-from blog.models import Postagem
+from malves.blog.views import Postagem
 # Create your views here.
 
 
