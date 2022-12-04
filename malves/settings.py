@@ -51,10 +51,10 @@ INSTALLED_APPS = [
     'crispy_forms',
     'corsheaders',
     'malves.base',
-    'servicos',
-    'contatos',
-    'blog.apps.BlogConfig',
-    'dashboard',
+    'malves.servicos',
+    'malves.contatos',
+    'malves.blog.apps.BlogConfig',
+    'malves.dashboard',
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'

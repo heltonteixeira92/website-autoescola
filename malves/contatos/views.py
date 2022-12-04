@@ -5,7 +5,7 @@ from django.http import JsonResponse
 
 def view_contatos(request):
     horarios = Horario.objects.all()
-    return render(request, 'contatos/contatos.html',
+    return render(request, 'contatos/templates/contatos/contatos.html',
                   {'section': 'contatos', 'horarios': horarios})
 
 
