@@ -1,5 +1,5 @@
 from django.urls import path
-from servicos.views import view_servicos
+from malves.servicos.views import view_servicos
 
 
 app_name = 'servicos'

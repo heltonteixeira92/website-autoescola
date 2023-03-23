@@ -1,5 +1,5 @@
 from django.urls import path
-from contatos.views import view_contatos, create_contact
+from malves.contatos.views import view_contatos, create_contact
 
 app_name = 'contatos'
 
