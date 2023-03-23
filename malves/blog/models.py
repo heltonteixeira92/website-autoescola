@@ -38,6 +38,8 @@ class Postagem(models.Model):
 
     class Meta:
         ordering = ('-publicar',)
+        verbose_name = 'postagem'
+        verbose_name_plural = 'postagens'
 
     @mark_safe
     def icone(self):

@@ -13,3 +13,7 @@ class Servicos(models.Model):
 
     def __str__(self):
         return self.titulo_servico
+
+    class Meta:
+        verbose_name = 'serviço'
+        verbose_name_plural = 'serviços'
