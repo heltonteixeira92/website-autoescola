@@ -5,7 +5,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('contas/', include('django.contrib.auth.urls')),
+    path('conta/', include('django.contrib.auth.urls')),
     path('', include('malves.base.urls')),
     path('servicos/', include('malves.servicos.urls')),
     path('contatos/', include('malves.contatos.urls')),
